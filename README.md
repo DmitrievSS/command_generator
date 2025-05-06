@@ -13,7 +13,7 @@ cd command_generator
 2. Создайте конфигурационный файл `config.json`:
 ```json
 {
-    "api_url": "https://deepseek-openai.yandex-team.ru/deepseek-v3/v1/chat/completions",
+    "api_url": "https://deepseek-openai.{host}/deepseek-v3/v1/chat/completions",
     "api_token": "ваш_токен",
     "script_dir": "путь_к_директории_со_скриптом"
 }
@@ -44,8 +44,7 @@ sudo ln -s $(pwd)/ai_wrapper.sh /usr/local/bin/ai
 
 ```bash
 ai "показать все файлы в текущей директории, отсортированные по размеру"
-ai "найти все файлы с расширением .py в домашней директории"
-ai --log "описание команды с включенным логированием"
+ai --log "найти все файлы с расширением .py в домашней директории"
 ```
 
 ### Дополнительные опции
